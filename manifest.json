@@ -2,7 +2,7 @@
   "format_version": 2,
   "header": {
     "name": "MInecraft Dungeons BP",
-    "description": "pack.description",
+    "description": "Brings Minecraft Dungeons physics and behaviours into Minecraft.",
     "uuid": "4a7caa68-d279-4f65-9bda-50b6cddca7b9",
     "version": [1, 0, 0],
     "min_engine_version": [1, 21, 0]
