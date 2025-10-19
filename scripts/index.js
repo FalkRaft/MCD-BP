@@ -68,7 +68,7 @@ world.afterEvents.worldLoad.subscribe(() => {
         })[0];
 
         if (!entity) {
-          player.runCommand(`aimassist ${player.name} set 90 90 distance 5`);
+          player.runCommand(`aimassist ${player.name} set 90 90 5 distance`);
         } else {
         }
 
