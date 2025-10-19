@@ -1,21 +1,33 @@
 {
   "format_version": 2,
   "header": {
-    "name": "pack.name",
+    "name": "MInecraft Dungeons BP",
     "description": "pack.description",
     "uuid": "4a7caa68-d279-4f65-9bda-50b6cddca7b9",
     "version": [1, 0, 0],
-    "min_engine_version": [1, 19, 0]
+    "min_engine_version": [1, 21, 0]
   },
   "modules": [
     {
       "type": "data",
       "uuid": "eadc0ea7-c081-4650-922e-d09aa3ee78c9",
       "version": [1, 0, 0]
+    },
+    {
+      "type": "script",
+      "uuid": "f376e09e-3579-4c92-bae1-ee0c04f24a5b",
+      "version": [1, 0, 0],
+      "entry": "scripts/index.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.0.0"
     }
   ],
   "metadata": {
-    "authors": [ "undefined" ],
+    "authors": [ "FalkRaft" ],
     "generated_with": {
       "blockception-minecraft-bedrock": [
         "9.0.1"
