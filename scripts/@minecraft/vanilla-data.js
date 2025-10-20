@@ -1,4 +1,4 @@
-export const MinecraftCameraPresetsTypesUnion = {
+export const MinecraftCameraPresetsTypes = {
   ControlSchemeCamera: "minecraft:control_scheme_camera",
   FirstPerson: "minecraft:first_person",
   FixedBoom: "minecraft:fixed_boom",
@@ -8,6 +8,6 @@ export const MinecraftCameraPresetsTypesUnion = {
   ThirdPersonFront: "minecraft:third_person_front",
 };
 
-export const MinecraftEntityTypesUnion = {
+export const MinecraftEntityTypes = {
   Player: "minecraft:player",
 };
