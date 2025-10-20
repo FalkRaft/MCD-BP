@@ -4,21 +4,32 @@ import {
   MinecraftEntityTypes,
 } from "@minecraft/vanilla-data";
 
+const MCDTagsEnum = {
+  CameraDev: "devc",
+  Cutscene: "cutscene",
+};
+
+const MCDItemTypes = {
+  Artifact: "mcd:artifact",
+  MeleeWeapon: "mcd:meleeweapon",
+  RangedWeapon: "mcd:rangedweapon",
+};
+
 world.beforeEvents.playerBreakBlock.subscribe(
-  (data) => (data.cancel = !data.player.hasTag("devc"))
+  (data) => (data.cancel = !data.player.hasTag(MCDTagsEnum.CameraDev))
 );
 
 world.beforeEvents.playerInteractWithBlock.subscribe(
   (data) =>
     (data.cancel =
-      !data.player.hasTag("devc") &&
+      !data.player.hasTag(MCDTagsEnum.CameraDev) &&
       data.block.x !== Math.trunc(data.block.x) &&
       data.block.y !== Math.trunc(data.block.y) &&
       data.block.z !== Math.trunc(data.block.z))
 );
 
 world.beforeEvents.itemUse.subscribe((data) => {
-  data.cancel = !data.itemStack.hasTag("artifact");
+  data.cancel = !data.itemStack.hasTag(MCDItemTypes.Artifact);
 });
 
 world.afterEvents.worldLoad.subscribe(() => {
@@ -53,7 +64,7 @@ world.afterEvents.worldLoad.subscribe(() => {
       }
 
       /// Camera
-      if (!player.hasTag("devc")) {
+      if (!player.hasTag(MCDTagsEnum.CameraDev)) {
         player.camera.setCamera(MinecraftCameraPresetsTypes.Free, {
           easeOptions: {
             easeTime: 1,
