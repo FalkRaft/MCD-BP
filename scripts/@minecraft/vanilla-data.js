@@ -1,10 +1,13 @@
-import {
-  MinecraftCameraPresetsTypes,
-  MinecraftCameraPresetsTypesUnion,
-} from "./camera-presets.js";
-import {
-  MinecraftEntityTypes,
-  MinecraftEntityTypesUnion,
-} from "./entity-types.js";
-export const MinecraftCameraPresetsTypes = MinecraftCameraPresetsTypesUnion;
-export const MinecraftEntityTypes = MinecraftEntityTypesUnion;
+export const MinecraftCameraPresetsTypesUnion = {
+  ControlSchemeCamera: "minecraft:control_scheme_camera",
+  FirstPerson: "minecraft:first_person",
+  FixedBoom: "minecraft:fixed_boom",
+  FollowOrbit: "minecraft:follow_orbit",
+  Free: "minecraft:free",
+  ThirdPerson: "minecraft:third_person",
+  ThirdPersonFront: "minecraft:third_person_front",
+};
+
+export const MinecraftEntityTypesUnion = {
+  Player: "minecraft:player",
+};
