@@ -17,6 +17,10 @@ world.beforeEvents.playerInteractWithBlock.subscribe(
       data.block.z !== Math.trunc(data.block.z))
 );
 
+world.beforeEvents.itemUse.subscribe((data) => {
+  data.cancel = !data.itemStack.hasTag("artifact");
+});
+
 world.afterEvents.worldLoad.subscribe(() => {
   system.runInterval(() => {
     const players = world.getAllPlayers().filter((p) => p.isValid);
