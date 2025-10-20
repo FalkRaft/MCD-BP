@@ -1,5 +1,8 @@
 import { world, system, EasingType } from "@minecraft/server";
-import { MinecraftCameraPresetsTypes, MinecraftEntityTypes } from "./@minecraft/vanilla-data.js";
+import {
+  MinecraftCameraPresetsTypes,
+  MinecraftEntityTypes,
+} from "./@minecraft/vanilla-data.js";
 import { MCDItemTypes, MCDTagsEnum } from "./@mcd/data.js";
 
 world.beforeEvents.playerBreakBlock.subscribe(
@@ -24,9 +27,15 @@ world.afterEvents.worldLoad.subscribe(() => {
     const players = world.getAllPlayers().filter((p) => p.isValid);
     for (let i = 0; i < players.length; i++) {
       const player = players[i];
-      const { px, py, pz } = player.location;
-      const { vx, vy, vz } = player.getVelocity();
-      const { phx, phy, phz } = player.getHeadLocation();
+      const px = player.location.x;
+      const py = player.location.y;
+      const pz = player.location.z;
+      const vx = player.getVelocity().x;
+      const vy = player.getVelocity().y;
+      const vz = player.getVelocity().z;
+      const phx = player.getHeadLocation().x;
+      const phy = player.getHeadLocation().y;
+      const phz = player.getHeadLocation().z;
       const nx = px + vx * 2;
       const ny = py + vx * 2;
       const nz = pz + vz * 2;
