@@ -1,8 +1,5 @@
 import { world, system, EasingType } from "@minecraft/server";
-import {
-  MinecraftCameraPresetsTypes,
-  MinecraftEntityTypes,
-} from "@minecraft/vanilla-data";
+import { MinecraftCameraPresetsTypes, MinecraftEntityTypes } from "./@minecraft/vanilla-data.js";
 import { MCDItemTypes, MCDTagsEnum } from "./@mcd/data.js";
 
 world.beforeEvents.playerBreakBlock.subscribe(
