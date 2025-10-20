@@ -7,6 +7,7 @@ import {
 world.beforeEvents.playerBreakBlock.subscribe(
   (data) => (data.cancel = !data.player.hasTag("devc"))
 );
+
 world.beforeEvents.playerInteractWithBlock.subscribe(
   (data) =>
     (data.cancel =
