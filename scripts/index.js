@@ -85,8 +85,9 @@ world.afterEvents.worldLoad.subscribe(() => {
         }
 
         const movementVector = player.inputInfo.getMovementVector();
-        const yaw = Math.atan2(movementVector.z, movementVector.x);
-        player.setRotation({ x: 0, y: yaw * (180 / Math.PI) });
+        const yaw = Math.atan2(movementVector.y, movementVector.x);
+        const yyaw = yaw * (180 / Math.PI);
+        player.setRotation({ x: 0, y: yyaw });
       } else {
         player.camera.clear();
       }
