@@ -3,17 +3,7 @@ import {
   MinecraftCameraPresetsTypes,
   MinecraftEntityTypes,
 } from "@minecraft/vanilla-data";
-
-const MCDTagsEnum = {
-  CameraDev: "devc",
-  Cutscene: "cutscene",
-};
-
-const MCDItemTypes = {
-  Artifact: "mcd:artifact",
-  MeleeWeapon: "mcd:meleeweapon",
-  RangedWeapon: "mcd:rangedweapon",
-};
+import { MCDItemTypes, MCDTagsEnum } from "./@mcd/data.js";
 
 world.beforeEvents.playerBreakBlock.subscribe(
   (data) => (data.cancel = !data.player.hasTag(MCDTagsEnum.CameraDev))
